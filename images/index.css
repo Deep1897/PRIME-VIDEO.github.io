@@ -1,0 +1,218 @@
+
+        body{
+            margin: 0;        
+            padding: 0;   
+            
+        }
+
+        #navbar{
+            border: 1px solid #1a232f;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a232f;
+        }
+        #navbarleft{
+            margin-left: 35px;         
+        }      
+
+            #navbarright{
+            display: flex;
+            width: 12%;
+            justify-content: space-between;
+            align-items: center; 
+            /* border: 1px solid blue; */
+            margin-right: 30px;
+        } 
+
+        #langdiv{
+            display: flex;
+           
+        }      
+
+        #globeimage>img{
+            height: 15%;
+            width: 28px;
+        }
+
+        #EN , a{
+            color: rgb(182, 172, 172);
+            text-decoration: none;
+            
+        }
+
+        #EN{
+            cursor: pointer;
+        }
+
+        #selectlang{
+            cursor: pointer;
+        }
+
+        #navbarleft>a>img{
+            width: 120px;
+            height: 46px;
+        }
+
+        #navbarleft>img:hover{
+            cursor: pointer;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+        }
+
+        #rightside>img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #leftside{
+            background-color: black;
+            /* border: 1px solid red; */
+            padding-left: 70px;
+            padding-top: 70px;
+           
+        }
+
+        #leftside>h1,h2,h5{
+            color: white;
+            font-weight: 100;
+        }
+        #leftside>h1{
+            font-size: 40px;
+            
+        }
+
+        #leftside>h5{
+            margin-left: 40px;
+            margin-top: 10px;
+            font-weight: 100;
+            
+        }
+
+        #leftside>a>button{
+            color: white;
+            background-color: #0f79af;
+            border: #0f79af;
+            padding: 15px 40px;
+            border-radius: 3px;
+            
+        }
+
+        #leftside>a>button:hover{
+            cursor: pointer;
+            background-color: #4590b6;
+            transition: ease all 0.2s;
+
+        }
+
+        @media only screen and (min-width: 421px) and (max-width: 780px){
+          
+
+           #container{
+               display: grid;
+               grid-template-columns: 100%;
+               grid-template-rows: auto auto;
+               
+           }
+
+           #leftside{
+               grid-area: 2/1/3/2;
+               padding: 0 15px;
+            padding-top: 0px;
+            height: 400px;
+           }
+
+           #rightside{
+               grid-area: 1/1/2/2;
+           }
+
+           #leftside>h1,h2,h5{
+            color: white;
+            font-weight: 100;
+            text-align: center;
+           
+           }
+
+           #leftside>h5{
+            margin-left: 0px;
+            margin-top: 18px;
+            font-weight: 100;
+            
+          }
+
+           #leftside>a>button{
+            color: white;
+            background-color: #0f79af;
+            border: #0f79af;
+            padding: 15px 40px;
+            
+            text-align: center;
+            width: 100%;      
+            font-size: 20px;      
+            }
+
+            #navbarright{
+            display: flex;
+            width: auto;            
+            margin-right: 80px;
+        } 
+           
+        }
+
+        @media only screen and (min-width: 70px) and (max-width: 420px){
+            #container{
+               display: grid;
+               grid-template-columns: 100%;
+               grid-template-rows: auto auto;
+               
+           }
+
+           #leftside{
+               grid-area: 2/1/3/2;
+               padding: 0 15px;
+            padding-top: 0px;
+            height: 400px;
+           }
+
+           #rightside{
+               grid-area: 1/1/2/2;
+           }
+
+           #leftside>h1,h2,h5{
+            color: white;
+            font-weight: 100;
+            text-align: center;
+           
+           }
+
+           #leftside>h5{
+            margin-left: 0px;
+            margin-top: 15px;
+            font-weight: 100;
+            
+          }
+
+           #leftside>a>button{
+            color: white;
+            background-color: #0f79af;
+            border: #0f79af;
+            padding: 15px 40px;
+            
+            text-align: center;
+            width: 100%;      
+            font-size: 20px;      
+            }          
+
+             #navbarright{
+                display: flex;
+                width: auto;
+                justify-content: space-between;
+                align-items: center; 
+                /* border: 1px solid blue; */
+                margin-right: 30px;
+            } 
+        }
