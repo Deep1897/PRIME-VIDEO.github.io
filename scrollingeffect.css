@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;;
+}
+
+#horizontal_slider{
+display:block;
+width: 100%;
+overflow-x: auto;
+background-color: #0f171e;
+
+}
+
+#horizontal_slider::-webkit-scrollbar{
+display: none;
+}
+
+#slider_container{
+display: block;
+white-space: nowrap;
+}
+
+#slider_container div{
+display: inline-block;
+margin-right: 10px;
+}
+
+#slider_container div:hover{
+cursor: pointer;
+}
+
