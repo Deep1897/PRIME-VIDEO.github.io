@@ -1,0 +1,25 @@
+#image_Conatainer{
+    display:flex;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    
+
+}
+#image_Conatainer>div{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(51, 49, 49);
+    color: white;
+    display: ruby-text-container;
+
+}
+img{
+    filter: blur();
+    opacity: 0.3;
+    width: 100%;
+    height:100%
+
+    
+}
