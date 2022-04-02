@@ -46,7 +46,15 @@
             
         
         <div id="right" >
-
+                   <a href="images/Raazi.html"> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg"/></div></a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg" /></div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg"/> </div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg"/></div></a>  
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg"/></div> </a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg"/></div> </a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg" /></div></a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg" /></div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg"/> </div></a>
         </div>
     </div>
     <div id="containerC" > 
@@ -80,48 +88,3 @@
     <div id="containerE" ></div>
 </body>
 </html>
-<script>
-
-
-    object=[
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg"},
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg"  },
-        
-     ];
-
-
-     source=[
-         {url:"images/Veerzara.html"},
-         {url:"images/Bankchor.html"}
-     ]
-          object.map(function(elem){
-              console.log(elem.image_url);
-              source.map(function(sr){
-                var anchor=document.createElement("a");
-                anchor.href=sr.url;
-
-
-                var box= document.createElement("div");
-         
-                var img=document.createElement("img");
-                img.setAttribute("class","imgC");
-                img.src=elem.image;
-                box.append(img);
-                anchor.append(box);
-                document.querySelector("#right").append(anchor);
-
-              });
-              
-              
-             
-
-          });
-
-</script>
