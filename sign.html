@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Sign In</title>
-    <style>
-    @media screen and (min-width: 467px) {
+ <style>
+
+@media screen and (min-width: 467px) {
     .content-box {
             border: solid 1px rgb(210, 210, 210);
             width: 300px;
@@ -20,9 +21,34 @@
             padding: 0px;
         }
     }
+    #credentialError {
+        margin: auto;
+        width: 300px;
+        border: solid 1px red;
+        display: none;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: red;
+    }
+    
+
+    #credentialError p {
+        color: black    ;
+    }
+
+
+
+    #userIdErrorMsgBox, #pswdErrorMsgBox, #credentialErrorBox {
+        color: red;
+        width: fit-content;
+        height: fit-content;
+        font-weight: normal;
+        display: none;
+    }
+
     #container {
         border-bottom: solid 1px #aba6a6;
-        padding-bottom: 2%;
+        padding-bottom: 1%;
         width: 80%;
         margin: auto;
     }
@@ -46,16 +72,38 @@
         display: block;
         margin-bottom: 20px;
     }
-    input[type=text], input[type=password], input[type=button] {
-        width: 98%;
+    .fld {
+        width: 92%;
+        height: 31px;
+        border: 1px solid #a6a6a6;
+        border-radius: 3px;
+        padding: 0px 10px 0px 10px;
+    }
+    .fld:focus {
+        background-color: #faeecb;
+        outline: none;
+        border: solid 1px rgb(236, 141, 58);
+        box-shadow: rgb(250, 174, 81, 0.5) 0px 5px 15px;
+    }
+    .btn {
+        width: 100%;
         height: 31px;
         border: 1px solid #a6a6a6;
         border-radius: 3px;
     }
-    #signInBtn {
+    .yellowBtn {
+        width: 100%;
         border: solid 1px #8c8c8b;
         background-image: linear-gradient(#ffe28a, #f7cc4f);
         width: 100%;
+    }
+    .yellowBtn:hover {
+        background-image: linear-gradient(#f6d572, #f7cc4f);
+    }
+    .yellowBtn:active {
+        background-image: linear-gradient(rgb(242, 241, 241), rgb(229, 226, 226));
+        
+        box-shadow: rgb(250, 174, 81, 0.5) 0px 5px 15px;
     }
     #psParent {
         display: flex;
@@ -67,6 +115,7 @@
     }
     #box2 {
         font-weight: normal;
+        border-bottom: 1px grey; 
     }
     #bottomBox {
         padding-top: 2%;
@@ -78,39 +127,47 @@
     #bottomBox > * {
         margin: auto;
     }
-    </style>
-    <script>
-        function display() {
-            var x = document.getElementById("userId").value;
-            document.getElementById("msg").innerHTML = "Hi! "+x+". This page is created by Sreehari Surabind";
-        }
-    </script>
+    #divBdr {
+        border-top: solid 1px rgb(205, 203, 203);
+        padding-top: 20px;
+    }
+    #usr {
+        color: black;
+    }
+    .cntr {
+        text-align: center;
+    }
+
+ </style>
 </head>
-<body>
+<body onload ="checkLogStatus1()">
     <div id ="container">
         <div class="logo">
             <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png" id="logo">
         </div>
+        <div id="credentialError"></div>
+        <p id ="usr"></p>
     <div class="content-box">
         <div id="signIn">
             <h1>Sign-In</h1>
             <div class="field">
                 <label>Email or mobile phone number</label><br>
-                <input type="text" id="userId">
-            </div><br>
+                <input type="text" id="userId" class="fld">
+            </div>
+            <div id="userIdErrorMsgBox"></div>
+            <br>
             <div class="field">
                 <div id="psParent"><div class="ps"><label>Password</label></div><div class="ps"><a href="https://www.amazon.com/ap/forgotpassword?clientContext=258-5526017-7000420&showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&accountStatusPolicy=P1&language=en_US&pageId=amzn_prime_video_desktop_us&openid.return_to=https%3A%2F%2Fwww.primevideo.com%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3Flocation%3D%2F%3Fref_%253Ddv_auth_ret&prevRID=RBX30QNSHKKCC5KX7QZ2&openid.assoc_handle=amzn_prime_video_desktop_us&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">Forgot your password?</a></div></div><br>
-                <input type="password" id="pswd"><br>
-            </div><br>      
-                <input type="button" value="Sign-In" id="signInBtn" onclick="display()"><br>
+                <input type="password" class="fld" id="pswd"><br>
+            </div><div id="pswdErrorMsgBox"></div><br>      
+                <input type="button" value="Sign-In" class="btn yellowBtn" id="signInBtn" onclick="validateCredentials()"><br>
         </div>
-        <p id = "msg" style="color: red;"></p>
         <div id="box2">
             <p>By continuing, you agree to Amazon's <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">Conditions of Use </a>and <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">Privacy Notice.</a></p>
             <div class="field"><input type="checkbox">Keep me signed in. <a href="">Details</a></div><br><br>
             <div id="newAmazon">
                 <div>New to Amazon</div><br>
-                <input type="button" value="Create Your Amazon Account" onclick="display()">
+                <input type="button" value="Create Your Amazon Account" class="btn" onclick="redirectPage()">
             </div>
         </div>
     </div>
@@ -127,3 +184,140 @@
     </div>
 </body>
 </html>
+
+<script>
+    //The signed up users' data
+    var emailDb = ["sree4hary@gmail.com", "fchauhan114@gmail.com", "jksingh00739@gmail.com", "udit123.uv@gmail.com"];
+    var pswdDb = ["sre123", "fai123", "jai123", "udi123"];
+    var nameDb = ["Sreehari Surabind", "Faizan Chauhan", "Jai Krishna", "Udit Varshney"];
+    
+    //function to validate the login credentials
+    function validateCredentials() {
+        var userId = document.getElementById("userId").value;
+        var pswd = document.getElementById("pswd").value;
+        var boxNames = ["userIdErrorMsgBox", "pswdErrorMsgBox", "credentialError"], errorMsgBox = [];
+        for (var i = 0; i < 3; i++) {
+            errorMsgBox.push(document.getElementById(boxNames[i]));
+        }
+        var errorMsg = ["Enter your email or mobile phone number", "Enter your password", "<h2>There was a problem</h2><p>We cannot find an account with that Email id/mobile number</p>", "<h2>There was a problem</h2><p>Your password is incorrect.</p>"];
+        if (userId == "" && pswd == "") {
+            errorMsgBox[0].innerHTML = errorMsg[0];
+            errorMsgBox[0].style.display = "block";
+            errorMsgBox[1].innerHTML = errorMsg[1];
+            errorMsgBox[1].style.display = "block";
+            errorMsgBox[2].style.display = "none";
+        } else if(userId != "" && pswd == "") {
+            errorMsgBox[0].style.display = "none";
+            errorMsgBox[1].innerHTML = errorMsg[1];
+            errorMsgBox[1].style.display = "block";
+            errorMsgBox[2].style.display = "none";
+        } else if(userId == "" && pswd != "") {
+            errorMsgBox[0].innerHTML = errorMsg[0];
+            errorMsgBox[0].style.display = "block";
+            errorMsgBox[1].style.display = "none";
+            errorMsgBox[2].style.display = "none";
+        } else {
+            for (var i = 0, flag = false, errorNumber = 0; i < emailDb.length; i++) {
+                if (userId == emailDb[i]) {
+                    if (pswd == pswdDb[i]) {
+                        login(nameDb[i]);
+                        flag = true;
+                        break;
+                    } else errorNumber = 3;
+                }
+            }
+            if (flag == false) {
+                errorMsgBox[2].style.display = "block";
+                if (errorNumber == 0) { // invalid login id
+                    errorMsgBox[2].innerHTML = errorMsg[2];
+                } else if (errorNumber == 3) { // invalid pswd
+                    errorMsgBox[2].innerHTML = errorMsg[3];
+                }
+            } else {
+                errorMsgBox[2].style.display = "none";
+            }
+        }
+    }
+    
+    //allows user to login
+    function login(value) {
+      localStorage.setItem("loggedUsr", value);
+      location.replace("result.html");
+    }
+    
+    //allows user to logout
+     function logout() {
+      localStorage.removeItem("loggedUsr");
+      location.replace("Amazon - Sign In.html");
+    }
+    
+    //redirects to the logged in page if user has already logged in
+    function checkLogStatus1() { //login page
+        var x = localStorage.getItem("loggedUsr");
+        var flag1 = false;
+        for (var i = 0; i < nameDb.length; i++) {
+            if (nameDb[i] == x) {
+                flag1 = true;
+                break;
+            }
+        }
+        if (flag1 == true) {
+            location.replace("home.html");
+        }
+    }
+    
+    //redirects to the login page if the user didn't log in
+    function checkLogStatus2() { // logged page
+        var x = localStorage.getItem("loggedUsr");
+        var flag2 = false;
+        for (var i = 0; i < nameDb.length; i++) {
+            if (nameDb[i] == x) {
+                flag2 = true;
+                break;
+            }
+        }
+        if (flag2 == false) {
+            location.replace("Amazon - Sign In.html");
+        }
+        document.getElementById("usr").innerHTML = x;
+    }
+    
+    //link to another page for button
+    function redirectPage() {
+        location.replace("Amazon Registration.html");
+    }
+    
+    //validate user sign up input data
+    function validateSignupCredentials() {
+        var details1 = ["urName", "urEmail", "urPswd", "rePswd"];
+        var details2 = [];
+        var errorMsg1 = ["<li>Enter your name</li>", "<li>Enter your email</li>", "<li>Enter your Password</li>", "<li>Passwords must match</li>"];
+        var error1Count = [0, 0, 0, 0];
+        for (var i = 0; i < 4; i++) {
+            details2.push(document.getElementById(details1[i]).value);
+        }
+        for (i = 0; i < 3; i++) {
+            if (details2[i] == "") {
+                error1Count[i] = 1;
+            }
+        }
+        if (details2[2] != "" && details2[2] != details2[3]) {
+            error1Count[3] = 1;
+        }
+        for (i = 0, errorFlag = false, result = "<ul>"; i < 3; i++) {
+            if (error1Count[i] == 1) {
+                result = result+errorMsg1[i];
+                error1Flag = true;
+            }
+        }
+        if (error1Count[3] == 1) {
+            result = result + errorMsg1[3];
+            error1Flag = true;
+        }
+        if (error1Flag == true) {
+            result = result+"</ul>";
+        document.getElementById("credentialErrorBox").innerHTML = "sample output";
+        }
+    }
+    
+    </script>
