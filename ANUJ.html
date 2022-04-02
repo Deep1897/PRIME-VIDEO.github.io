@@ -7,14 +7,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="homePage.css">
 </head>
-<body>
 
+    <div id="navbar">
+        <div id="navbarleft">
+           <a href="index.html"><img src="images/amazon logo.PNG" alt=""></a> 
+        </div>
+        <div id="navbarright">
+          
+                <div id="globeimage"><img src="images/globe logo.PNG" alt=""></div>
+                
+                <div id="langselect">
+                    <span id="EN">EN</span>
+                    <select name="" id="selectlang"></select></div>
+                 <a href="Amazon - Sign In.html">Sign In</a>    <!--add the signin page link here-->
+           
+            <div></div>
+        </div>
 
+    </div>
 
-    <!-- *******************This Is For Navbar********************** -->
-    <div include-html="navbar.html" id="navbar_file"></div>
-
-    
     <div id="containerjai">
         <div id="leftside">
             <h1>Welcome to Prime Video</h1>
@@ -35,7 +46,15 @@
             
         
         <div id="right" >
-
+                   <a href="images/Raazi.html"> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg"/></div></a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg" /></div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg"/> </div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg"/></div></a>  
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg"/></div> </a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg"/></div> </a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg" /></div></a>
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg" /></div></a> 
+                   <a href=""> <div><img class="imgC" src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg"/> </div></a>
         </div>
     </div>
     <div id="containerC" > 
@@ -67,39 +86,5 @@
         </div>
     </div>
     <div id="containerE" ></div>
-
-<!-- *************************This is for Footer********************* -->
-    <div include-html="footer1.html" id="footer_file"></div>
 </body>
 </html>
-<script>
-
-
-    object=[
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg"},
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg"  },
-        {image:"https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg"  },
-        
-     ];
-          object.map(function(elem){
-              console.log(elem.image_url);
-             var box= document.createElement("div");
-         
-             var img=document.createElement("img");
-             img.setAttribute("class","imgC");
-             img.src=elem.image;
-             box.append(img);
-             document.querySelector("#right").append(box);
-
-          });
-
-</script>
-
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/include-html.min.js"></script>

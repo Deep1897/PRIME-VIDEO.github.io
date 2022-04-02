@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+ 
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+height: 600px;
+width: 101%;
+
+}
+
+
+
+/* ************************container stylling*********************** */
+
+
+
+
+
+body{
+  background-color: #191c1f; 
+}
+
+#horizontal_slider{
+  display:flex;
+  width: 100%;
+  overflow-x: auto;
+  background-color: #d8e1e8;
+  
+}
+
+#horizontal_slider::-webkit-scrollbar{
+  display: none;
+}
+
+#slider_container_top{
+  display: flex;
+  white-space: nowrap;
+  /* margin-left: 50px; */
+}
+#slider_container{
+  display: flex;
+  white-space: nowrap;
+  margin-left: 50px;
+}
+
+#slider_container div{
+  display: flex;
+  margin-right: 10px;
+}
+
+#slider_container div:hover{
+  cursor: pointer;
+}
+
+.movies_headings{
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+
+
+/* ************************** footer*******************************  */
+.gr{
+background-color: rgb(41, 40, 40);
+height:150px;
+width: 100%;
+
+
+}
+.p1{
+width: 150px;
+height: 60px;
+mix-blend-mode: lighten;
+margin-top: 20px;
+margin-left: 600px;
+}
+@media screen and (max-width: 600px) {
+.navbar a:not(:first-child), .dropdown .dropbtn {
+  display: none;
+}
+.navbar a.icon {
+  float: right;
+  display: block;
+}
+}
