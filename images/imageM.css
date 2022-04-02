@@ -41,12 +41,12 @@ img{
 }
 #fonticon{
     display: flex;
-    width: 200px;
+    width: 100px;
     height:70px;
-    background-color: rgb(23, 23, 180);
+    background-color: #0f79af;
     color: black;
     border-radius: 10px;
-    margin: auto;
+    margin-left: 90px;
 }
 #fonticon>div{
     margin-top: 10px;
@@ -59,7 +59,7 @@ img{
 
 }
 #fonticon:hover{
-    background-color: blue;
+    background-color: rgb(20, 127, 214);
 }
 .continue{
     font-size: 50px;
@@ -69,7 +69,9 @@ img{
     display: flex;
     width: 600px;
     height: auto;
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-left: -45px;
+    
 }
 h3{
     margin-right: -200px;
@@ -83,10 +85,11 @@ h1{
 #righticon{
     display: flex;
     position: relative;
-    margin-left: -40px;
+    margin-left: 20px;
     width: 350px;
     box-sizing: border-box;
     gap:20px
+    
     
     
 }
@@ -140,4 +143,10 @@ p{
    
     color: white;
     
+}
+p{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
 }
