@@ -7,25 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="homePage.css">
 </head>
+<body>
 
-    <div id="navbar">
-        <div id="navbarleft">
-           <a href="index.html"><img src="images/amazon logo.PNG" alt=""></a> 
-        </div>
-        <div id="navbarright">
-          
-                <div id="globeimage"><img src="images/globe logo.PNG" alt=""></div>
-                
-                <div id="langselect">
-                    <span id="EN">EN</span>
-                    <select name="" id="selectlang"></select></div>
-                 <a href="Amazon - Sign In.html">Sign In</a>    <!--add the signin page link here-->
-           
-            <div></div>
-        </div>
 
-    </div>
 
+    <!-- *******************This Is For Navbar********************** -->
+    <div include-html="navbar.html" id="navbar_file"></div>
+
+    
     <div id="containerjai">
         <div id="leftside">
             <h1>Welcome to Prime Video</h1>
@@ -78,6 +67,9 @@
         </div>
     </div>
     <div id="containerE" ></div>
+
+<!-- *************************This is for Footer********************* -->
+    <div include-html="footer1.html" id="footer_file"></div>
 </body>
 </html>
 <script>
@@ -108,3 +100,6 @@
           });
 
 </script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/include-html.min.js"></script>
