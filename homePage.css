@@ -256,6 +256,8 @@
             }
             #right{
                 grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,150px);
+
                 width:35%;
             }
 
