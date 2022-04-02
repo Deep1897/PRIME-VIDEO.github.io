@@ -18,7 +18,7 @@
     width: 60%;
     height: 100%;
     box-sizing: border-box;
-    background-image: linear-gradient(to right,rgb(0, 0, 0)10%,rgb(131, 121, 121)40%,black));
+    background-image: linear-gradient(to right,rgb(0, 0, 0)10%,rgb(131, 121, 121)40%,black);
 
 }
 img{
