@@ -140,7 +140,7 @@
 
  </style>
 </head>
-<body onload ="checkLogStatus1()">
+<body >
     <div id ="container">
         <div class="logo">
             <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png" id="logo">
@@ -160,7 +160,7 @@
                 <div id="psParent"><div class="ps"><label>Password</label></div><div class="ps"><a href="https://www.amazon.com/ap/forgotpassword?clientContext=258-5526017-7000420&showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&accountStatusPolicy=P1&language=en_US&pageId=amzn_prime_video_desktop_us&openid.return_to=https%3A%2F%2Fwww.primevideo.com%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3Flocation%3D%2F%3Fref_%253Ddv_auth_ret&prevRID=RBX30QNSHKKCC5KX7QZ2&openid.assoc_handle=amzn_prime_video_desktop_us&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">Forgot your password?</a></div></div><br>
                 <input type="password" class="fld" id="pswd"><br>
             </div><div id="pswdErrorMsgBox"></div><br>      
-                <input type="button" value="Sign-In" class="btn yellowBtn" id="signInBtn" onclick="validateCredentials()"><br>
+                <input type="button" value="Sign-In" class="btn yellowBtn" id="signInBtn" ><br>
         </div>
         <div id="box2">
             <p>By continuing, you agree to Amazon's <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">Conditions of Use </a>and <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">Privacy Notice.</a></p>
@@ -185,7 +185,34 @@
 </body>
 </html>
 
+
 <script>
+    document.querySelector("#signInBtn").addEventListener("click",signfunction);
+    var usercred = JSON.parse(localStorage.getItem("usercredentials"))||[];
+    function signfunction(){
+        var userid = document.querySelector("#userId").value;
+
+        var password = document.querySelector("#pswd").value;
+
+        var obj = {
+            username : userid,
+            passwords : password
+        }
+
+        usercred.push(obj);
+        localStorage.setItem("usercredentials",JSON.stringify(usercred));  
+        
+        var userid = document.querySelector("#userId").value="";
+
+        var password = document.querySelector("#pswd").value="";
+        alert("login successfull");
+
+        window.location.href="homepage/index.html"
+    }
+</script>
+
+
+<!-- <script>
     //The signed up users' data
     var emailDb = ["sree4hary@gmail.com", "fchauhan114@gmail.com", "jksingh00739@gmail.com", "udit123.uv@gmail.com"];
     var pswdDb = ["sre123", "fai123", "jai123", "udi123"];
@@ -320,4 +347,4 @@
         }
     }
     
-    </script>
+    </script> -->
