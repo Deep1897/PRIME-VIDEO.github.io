@@ -1,9 +1,53 @@
-# PRIME-VIDEO
-Hello Everyone,
-My name is Deep Raj singh and we are having a six members in a group (Jai krishna singh, Sreehari Surabind, Udit varshney , Faizan Khan and Anuj kashyap) I would like to thank Masai school has given us a opportunity to clone a amazon prime video website.
-In this webiste if you search the Amazon prime video in your chrome browser it will be showing us a homepage in which there is a navbar of Amazon prime video logo and and the right side of the page sign in button and language button shown if you see the webpage there is a combine image of multiple movie showing in that website and there is start your 30-Day free trial button showing next to it and some grid part of your favourite channel, after that if you click the sign in button of that website you will be redirected to the sign in page, In that sign in page you will be inserted your email address and password in which you have created first and if you have not created any Id of it you will be redirected to the sign up page in which there is some details you have to fill up for sign in like name, email address, password, age etc.
-After the sign in page you will be redirected to main page of that website in which you have shown some Bollywood, Hollywood, South Indian, and Telugu, type of movies and web series in it.
-There is a  scrolling part you have shown there and if you click any one of the movie or webseries it will redirected to that subscription page.
-There is a subscription page in which you have to submit your details of your card like card holder Name, Number, CVV after the payment page you have subscribe to that channel and enjoying to watch some latest movies and webseries in it.
-After the subscription you have to watch any of the movies or a webseries and if you click on it, there is a movie name or a webseries name, some discription about that movie or a webseries and some button like Play, Watch later, Download. If you  click the Play button of that movie you  will be redirected to that movie page, and if you click the watch later button it will be shown to your favourite and if you click on that download button that movie will be shown to downloaded icon.
-Thank you
+
+# Amazom Prime Clone
+
+This is clone of Amazom Prime video. It is my first ever project.
+
+
+## Authors
+
+- [@JaiS739](https://github.com/JaiS739)
+- [@deepraj](https://github.com/Deep1897)
+- [@Uditshetty](https://github.com/Uditshetty)
+- [@sree4hary](https://github.com/sree4hary)
+- [@Anuj2k21](https://github.com/Anuj2k21)
+- [@0786faizan](https://github.com/0786faizan)
+
+
+## Deployment
+
+To deploy this project run netlify deploy --prod
+
+
+
+
+## Documentation
+
+[Blog](https://medium.com/@jksingh00739/hi-everyone-7481413229de)
+
+
+## Features
+Navbar to navigate to other pages
+Proper promotion of products on landing page
+Dedicated product category pages
+Dedicated product details page
+Cart Functionality
+Adding or removing or increase or decrease the quantity off product
+Authentication provided to Login and Signup
+
+
+
+## 🛠 Skills
+Javascript, HTML, CSS, JQuery
+
+
+## 🚀 About Me
+I am a Full stack developer, specializing in JavaScript. Always like to be around techy things.
+
+
+
+## 🔗 Links
+[![portfolio](https://the-awesome-jksingh00739-gmail-com-site-ce05f.netlify.app/)
+[![linkedin](https://www.linkedin.com/in/jai-krishna-singh/)
+[![twitter](https://twitter.com/jaikrishna00739)
+
