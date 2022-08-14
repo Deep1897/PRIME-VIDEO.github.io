@@ -2,7 +2,7 @@
 # Amazom Prime Clone
 
 This is clone of Amazom Prime video. It is my first ever project.
-
+Live link:- https://legendary-lamington-49dbab.netlify.app/
 
 ## Authors
 
